@@ -18,13 +18,17 @@ let pageNumber = 1
 const changeMode = document.querySelector('#change-mode')
 let mode = 'cardmode'
 
-window.onload = () => {
-    fetch("https://m-shop-001.herokuapp.com/allproduct", {
+fetch("https://m-shop-001.herokuapp.com/allproduct", {
         method: "GET"
-    }).then(response => response.json()).then(res => renderMovieList(res))
-}
-
+    }).then(response => response.json()).then(res => 
+     {
+      console.log(res)
+      renderMovieList(res)
+     }).catch(e => {
+       console.log(e)
+     })
 function renderMovieList(data) {
+  console.log("ok")
   let rawHTML = ''
   if (mode === 'cardmode') {
     data.forEach((item) => {
@@ -67,7 +71,7 @@ function renderMovieList(data) {
   }
   dataPanel.innerHTML = rawHTML
 }
-
+console.log("ok")
 //Function for Madal
 function showMovieModal(id) {
   const modalTitle = document.querySelector('#movie-modal-title')
