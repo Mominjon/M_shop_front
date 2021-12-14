@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <link rel="stylesheet" href="./asseste/css/admin-panel.css">
+</head>
+<body>
+    <div class="sidebar">
+        <div class="sidebar__subsections">
+          <div class="sidebar__subsections-brand">Admin 1.0</div>
+          <ul>
+            <li><a class="button_1" href="#">Add post</a></li>
+            <li><a class="button_4" href="#">add admin</a></li>
+            <li><a class="button_5" href="#">users</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="page">
+        <div class="header">
+          <div class="header__search">
+            <input type="text" placeholder="Search..." />
+          </div>
+          <div class="header__date">
+            <span id="date"></span>
+          </div>
+          <div class="header__user">
+            Hello, Admin <svg class="lnr lnr-cog icon"><use xlink:href="#lnr-cog"></use></svg>
+          </div>
+        </div>
+          <div class="content__main">
+            <div class="content__main-page">
+              <div class="box" style="height:2000px;">
+                  <input type="text" class="product_name" placeholder="product_name">
+                  <input type="text" class="product_text" placeholder="product_text">
+                  <input type="file" class="product_photo" placeholder="product_photo">
+                  <button class="btn mt-5 form-post button_add_product" id="post-form" >Summbit</button>
+              </div>
+              <div class="box2 hide" style="height:2000px;">
+                 
+
+              </div>
+              <div class="box3 hide" style="height:2000px;">
+               
+              </div>
+              <div class="box4 hide" style="height:2000px;">
+                  <input type="text" placeholder="admin name" class="input_register_name">
+                  <input type="text" placeholder="admin surname" class="input_register_surname">
+                  <input type="password" placeholder="admin password" class="input_register_password">
+                  <input type="text"  class="input_register_role" value="admin">
+                  <button class="send_admin">add admin</button>
+              </div>
+              <div class="box5 hide" style="height:2000px;">
+                <table class="group__table">
+                    <tr>
+                        <th>user id</th>
+                        <th>usre name</th>
+                        <th>user surname</th>
+                        <th>user password</th>
+                        <th>role</th>
+                    </tr>
+                    <tr class="table__group__list">
+        
+                    </tr>
+                </table>
+              </div>
+            </div>
+          </div>
+          
+        </div>
+      </div>
+      <div>
+       
+   
+        
+        <div class="loader">
+          <img src="./asseste/images/loader.svg" alt="">
+      </div>
+      
+      </div>
+      <script src="./asseste/js/admin-panel.js"></script>
+  
+     
+</body>
+</html>

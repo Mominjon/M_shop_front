@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./asseste/css/login.css">
+</head>
+<body>
+    <div class="container">
+
+        <div class="login-container">
+    
+            <div class="login-box">
+    
+    
+                <!-- LOGIN -->
+                <div id="login-form">
+                    <ul>
+                        <li id="tab-login" class="tab-bot-border">Login</li>
+                        <li id="tab-register">Register</li>
+                    </ul>
+    
+                    <input type="text" id="login-username" name="username" placeholder="username" class="login-username">
+                    <input type="password" id="login-password" name="password" placeholder="password" class="password-username">
+    
+                    <a href="#">Forgot your password?</a>
+    
+                    <button type="button" class="login_button">login</button>
+    
+                </div>
+    
+                <!-- REGISTER -->
+                <div id="register-form">
+                    
+                    <ul>
+                        <li id="tab-login">Login</li>
+                        <li id="tab-register" class="tab-bot-border">Register</li>
+                    </ul>
+    
+                
+                    <!-- FIRST NAME -->
+                    <input type="text" style="margin-top: 10px;" id="register-firstname" class="input_username_register" name="firstname" onblur="if (this.value == '') {this.value = 'firstname';}" onfocus="if (this.value == 'firstname') {this.value = '';}" value="firstname"/>
+    
+                    <!-- LAST NAME -->
+                    <input type="text" id="register-lastname" class="input_surname_register" name="lastname" onblur="if (this.value == '') {this.value = 'lastname';}" onfocus="if (this.value == 'lastname') {this.value = '';}" value="lastname"/>
+    
+                    <!-- PASSWORD -->
+                    <input type="password" class="input_password_register" id="register-password" name="password" placeholder="password">
+    
+    
+                    <button type="button" class="button_register">login</button>
+    
+                </div><!-- register-form -->
+    
+                <div class="form-background"></div>
+    
+            </div><!-- login-form -->
+    
+        </div><!-- login-container -->
+    
+    </div><!-- container -->
+    <div class="loader">
+        <img src="./asseste/images/loader.svg" alt="">
+    </div>
+    <script src="./asseste/js/login.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <script>
+        // tabs
+		$('#login-form #tab-register').click(function() {
+
+$('#login-form').fadeToggle();
+$(".form-background").animate(
+    {
+        "top": "-342px",
+        "width": "400px",
+        "height": "410px"
+    },
+    "slow", function(){
+        $('#register-form').fadeToggle();
+    });
+});
+
+$('#register-form #tab-login').click(function() {
+
+   $('#register-form').fadeToggle();
+$(".form-background").animate(
+    {
+        "top": "-214px",
+        "width": "400px",
+        "height": "290px"
+    },
+    "slow", function(){
+        $('#login-form').fadeToggle();
+    });
+});
+
+// Tips
+$('#register-form .email-tip-icon').hover(function(){
+$('#message-email').fadeToggle();
+});
+
+$('#register-form .password-tip-icon').hover(function(){
+$('#message-password').fadeToggle();
+});
+    </script>
+</body>
+</html>
