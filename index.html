@@ -137,7 +137,15 @@
     })
     </script>
     <script src="./asseste/js/main.js"></script>
+    <script>
+      window.onload = () => {
+        if(window.localStorage.getItem("token")){
 
+        }else {
+          window.location = "login.html"
+        }
+      }
+    </script>
 </body>
 
 </html>
